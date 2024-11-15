@@ -118,7 +118,7 @@ module appServicePlan './core/host/appserviceplan.bicep' = {
 
 // Store secrets in a keyvault
 module keyVault './core/security/keyvault.bicep' = {
-  name: 'keyvault'
+  name: 'keyvaultmahi'
   scope: rg
   params: {
     name: !empty(keyVaultName) ? keyVaultName : '${abbrs.keyVaultVaults}${resourceToken}'
