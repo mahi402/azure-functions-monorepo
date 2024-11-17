@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "mongodb": "^4.17.0",
-    "mongoose": "^6.11.3"
+    "mongoose": "^6.11.3",
+    "@repo/models": "*"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
