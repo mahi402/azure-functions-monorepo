@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import { DefaultAzureCredential } from "@azure/identity";
 import { SecretClient } from "@azure/keyvault-secrets";
 import { logger } from "../config/observability";
-import { IConfig } from "config";
+import { IConfig } from "./appConfig";
 
 export const getConfig: () => Promise<AppConfig> = async () => {
     // Load any ENV vars from local .env file

@@ -3,6 +3,9 @@ export interface ObservabilityConfig {
     roleName: string
 }
 
+export interface IConfig {
+    get<T>(key: string): T; 
+  }
 export interface DatabaseConfig {
     connectionString: string
     databaseName: string
