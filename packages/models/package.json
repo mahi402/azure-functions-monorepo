@@ -18,25 +18,17 @@
   "dependencies": {
     "@repo/models": "^1.0.0",
     "mongodb": "^4.17.0",
-<<<<<<< HEAD
-    "mongoose": "^6.11.3"
-=======
     "mongoose": "^6.11.3",
     "repos-model": "^0.0.45"
    
->>>>>>> 33a6773c1b308f3b1e57544a5c4619d34ecb8f44
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "@types/node": "^22.9.0",
     "tsup": "latest",
-<<<<<<< HEAD
-    "typescript": "latest"
-=======
     "typescript": "latest",
     "repos-model": "^0.0.45"
   
->>>>>>> 33a6773c1b308f3b1e57544a5c4619d34ecb8f44
   }
 }
