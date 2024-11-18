@@ -23,7 +23,7 @@
     "node": ">=18"
   },
   "dependencies": {
-    "@repo/models": "github:mahi402/azure-functions-monorepo/packages",
+    "@repo/models": "./packages",
     "repos-model": "^0.0.45"
   }
 }
