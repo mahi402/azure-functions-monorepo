@@ -47,6 +47,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-typescript": "^7.17.12",
+    "@repo/models": "^1.0.0",
     "@repo/typescript-config": "*",
     "@types/config": "^0.0.41",
     "@types/cors": "^2.8.17",
@@ -65,8 +66,7 @@
     "supertest": "^6.2.3",
     "ts-jest": "^28.0.4",
     "tsup": "^8.3.5",
-    "typescript": "^4.9.5",
-    "@repo/models": "../../packages"
+    "typescript": "^4.9.5"
     
   }
 }
