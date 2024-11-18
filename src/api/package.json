@@ -65,6 +65,7 @@
     "ts-jest": "^28.0.4",
     "tsup": "^8.3.5",
     "typescript": "^4.9.5",
-    "repos-model": "^0.0.45"
+    "repos-model": "^0.0.45",
+    "@repo/models": "^1.0.0"
   }
 }
