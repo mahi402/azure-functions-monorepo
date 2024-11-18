@@ -47,6 +47,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-typescript": "^7.17.12",
+    "@repo/models": "^1.0.0",
     "@repo/typescript-config": "*",
     "@types/config": "^0.0.41",
     "@types/cors": "^2.8.17",
@@ -61,11 +62,11 @@
     "@typescript-eslint/parser": "^5.27.1",
     "eslint": "^8.17.0",
     "jest": "^28.1.1",
+    "repos-model": "^0.0.45",
     "supertest": "^6.2.3",
     "ts-jest": "^28.0.4",
     "tsup": "^8.3.5",
-    "typescript": "^4.9.5",
-    "repos-model": "^0.0.45",
-    "@repo/models": "^1.0.0"
+    "typescript": "^4.9.5"
+    
   }
 }
