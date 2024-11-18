@@ -52,8 +52,6 @@ export const createApp = async (): Promise<Express> => {
     })
   );
 
-  
-
   // API Routes
   app.use("/lists/:listId/items", items);
   app.use("/lists", lists);

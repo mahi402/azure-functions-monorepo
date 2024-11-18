@@ -16,7 +16,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "@repo/models": "^1.0.0",
     "mongodb": "^4.17.0",
     "mongoose": "^6.11.3",
     "repos-model": "^0.0.45"

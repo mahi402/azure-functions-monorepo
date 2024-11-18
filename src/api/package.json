@@ -27,30 +27,27 @@
     ]
   },
   "dependencies": {
-    "@azure/identity": "^4.2.1",
-    "@azure/keyvault-secrets": "^4.9.0",
-    "applicationinsights": "^2.9.6",
+    "@azure/identity": "4.2.1",
+    "@azure/keyvault-secrets": "^4.7.0",
+    "applicationinsights": "^2.5.1",
     "config": "^3.3.7",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.21.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.21.1",
     "mongodb": "^4.17.0",
-    "mongoose": "^6.13.4",
+    "mongoose": "^6.11.3",
     "swagger-jsdoc": "^6.2.1",
     "swagger-ui-express": "^4.4.0",
-    "ts-node": "^10.9.2",
-    "winston": "^3.17.0",
+    "winston": "^3.7.2",
     "winston-transport": "^4.5.0",
     "yamljs": "^0.3.0",
-    "repos-model": "^0.0.45"
+    "@repo/models": "^1.0.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-typescript": "^7.17.12",
-    "@repo/models": "^1.0.0",
     "@repo/typescript-config": "*",
     "@types/config": "^0.0.41",
-    "@types/cors": "^2.8.17",
     "@types/express": "^4.17.13",
     "@types/jest": "^28.1.1",
     "@types/supertest": "^2.0.12",
@@ -62,11 +59,11 @@
     "@typescript-eslint/parser": "^5.27.1",
     "eslint": "^8.17.0",
     "jest": "^28.1.1",
-    "repos-model": "^0.0.45",
     "supertest": "^6.2.3",
     "ts-jest": "^28.0.4",
-    "tsup": "^8.3.5",
-    "typescript": "^4.9.5"
-    
+    "tsup": "latest",
+    "typescript": "^4.7.3",
+    "@types/cors": "^2.8.17",
+    "@repo/models": "^1.0.0"
   }
 }
