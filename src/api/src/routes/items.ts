@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import { Request } from "express";
 import { PagingQueryParams } from "../routes/common";
-import { todoItem } from "repos-model";
+import { todoItem } from "@repo/models";
 
 const router = express.Router({ mergeParams: true });
 
