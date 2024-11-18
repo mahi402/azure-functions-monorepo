@@ -6,7 +6,8 @@
     "moduleResolution": "node",
     "outDir": "./dist",
     "paths": {
-      "@repo/models": ["./repo/models"]
+      "repo:models": ["node_modules/@repo/models"]
+      //"@repo/models": ["./repo/models"]
     }
   },
   "exclude": ["node_modules"],
