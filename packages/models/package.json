@@ -17,9 +17,9 @@
     "test": "jest"
   },
   "dependencies": {
+    "@repo/models": "^1.0.0",
     "mongodb": "^4.17.0",
     "mongoose": "^6.11.3"
-   
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
@@ -27,6 +27,5 @@
     "@types/node": "^22.9.0",
     "tsup": "latest",
     "typescript": "latest"
-  
   }
 }
