@@ -1,6 +1,5 @@
 {
   "name": "kbt-platform",
-  "private": true,
   "workspaces": [
     "src/*",
     "packages/*"
