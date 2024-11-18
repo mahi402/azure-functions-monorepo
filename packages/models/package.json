@@ -1,7 +1,6 @@
 {
   "name": "@repo/models",
   "version": "1.0.0",
-  "private": true,
   "description": "Uses zod schemas to generate Open API Swagger documentation",
   "author": "Tom Fisher",
   "main": "./dist/index.js",
