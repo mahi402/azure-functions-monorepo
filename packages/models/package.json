@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "mongodb": "^4.17.0",
-    "mongoose": "^6.11.3"
+    "mongoose": "^6.11.3",
+    "repos-model": "^0.0.45"
    
   },
   "devDependencies": {
@@ -26,7 +27,8 @@
     "@repo/typescript-config": "*",
     "@types/node": "^22.9.0",
     "tsup": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "repos-model": "^0.0.45"
   
   }
 }
