@@ -13,7 +13,7 @@ services:
     project: ./src/web
     dist: dist
     language: js
-    host: appservice
+    host: staticwebapp
     hooks:
       # Creates a temporary `.env.local` file for the build command. Vite will automatically use it during build.
       # The expected/required values are mapped to the infrastructure outputs.
@@ -37,7 +37,7 @@ services:
   api:
     project: ./src/api
     language: js
-    host: appservice
+    host: function
     build:
       # Custom build step to use npm workspaces
       command: npm install --workspaces
