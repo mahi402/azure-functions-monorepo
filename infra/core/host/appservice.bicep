@@ -46,7 +46,7 @@ resource appService 'Microsoft.Web/sites@2022-03-01' = {
   properties: {
     serverFarmId: appServicePlanId
     siteConfig: {
-      linuxFxVersion: linuxFxVersion
+      linuxFxVersion: 'DOCKER|${acrResource.name}.azurecr.io/mono::v1'
       alwaysOn: alwaysOn
       ftpsState: ftpsState
       minTlsVersion: '1.2'
@@ -120,6 +120,30 @@ resource applicationInsights 'Microsoft.Insights/components@2020-02-02' existing
   name: applicationInsightsName
 }
 
+
+@minLength(5)
+@maxLength(50)
+@description('Provide a globally unique name of your Azure Container Registry')
+param acrName string = 'acr${uniqueString(resourceGroup().id)}'
+
+
+
+@description('Provide a tier of your Azure Container Registry.')
+param acrSku string = 'Basic'
+
+resource acrResource 'Microsoft.ContainerRegistry/registries@2023-01-01-preview' = {
+  name: 'mahi402'
+  location: location
+  sku: {
+    name: acrSku
+  }
+  properties: {
+    adminUserEnabled: false
+  }
+}
+
+@description('Output the login server property for later use')
+output loginServer string = acrResource.properties.loginServer
 output identityPrincipalId string = managedIdentity ? appService.identity.principalId : ''
 output name string = appService.name
 output uri string = 'https://${appService.properties.defaultHostName}'

@@ -41,7 +41,7 @@ services:
     build:
       command: |
         # Custom build step for Docker image
-        docker build -t mahi40.azurecr.io/mono-app:v1 .
+        docker build -t mahi402.azurecr.io/mono-app:v1 .
         docker push mahi402.azurecr.io/mono-app:v1
     azure:
       resource-group: dev-rg
