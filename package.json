@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
+    "build:api": "turbo run build --filter=src/api/*",
     "clean": "turbo run clean",
     "dev": "turbo run dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
