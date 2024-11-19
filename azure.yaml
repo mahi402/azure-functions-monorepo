@@ -2,11 +2,10 @@
 
 name: todo-nodejs-mongo
 metadata:
-  template: todo-nodejs-mongo@0.0.1-beta
+  template: azd-init@1.5.0
 workflows:
   up: 
     steps:
-      - azd: provision
       - azd: deploy --all
 services:
   web:
