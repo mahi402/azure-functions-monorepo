@@ -75,6 +75,7 @@ module api './app/api.bicep' = {
       AZURE_COSMOS_DATABASE_NAME: cosmos.outputs.databaseName
       AZURE_COSMOS_ENDPOINT: cosmos.outputs.endpoint
       API_ALLOW_ORIGINS: web.outputs.SERVICE_WEB_URI
+      WEBSITE_RUN_FROM_PACKAGE:1
      }
   }
 }
