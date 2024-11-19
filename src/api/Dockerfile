@@ -20,4 +20,4 @@
   RUN npm ci --omit=dev --workspace=src/api --cache /tmp/empty-cache
   COPY --from=build app/src/api/dist src/api/dist
   EXPOSE 3000
-  CMD [ "npm", "start", "--workspace=backend" ]
+  CMD [ "npm", "start", "--workspace=src/api" ]
