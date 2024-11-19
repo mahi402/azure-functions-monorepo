@@ -40,4 +40,10 @@ services:
     host: function
     build:
       # Custom build step to use npm workspaces
-      command: npm install --workspaces
+      command: | 
+          cp ../../package*.json ./ &&
+          npm install --workspaces &&
+          npm run build
+     azure:
+      resource-group: dev-rg
+      location: eastasia
