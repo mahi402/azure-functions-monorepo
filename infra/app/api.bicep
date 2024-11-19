@@ -3,29 +3,29 @@ param location string = resourceGroup().location
 param tags object = {}
 
 param allowedOrigins array = []
-param appCommandLine string = ''
 param applicationInsightsName string = ''
 param appServicePlanId string
 @secure()
 param appSettings object = {}
 param keyVaultName string
 param serviceName string = 'api'
+param storageAccountName string
 
-module api '../core/host/appservice.bicep' = {
-  name: '${name}-app-module'
+module api '../core/host/functions.bicep' = {
+  name: '${serviceName}-functions-node-module'
   params: {
     name: name
     location: location
     tags: union(tags, { 'azd-service-name': serviceName })
     allowedOrigins: allowedOrigins
-    appCommandLine: appCommandLine
+    alwaysOn: false
+    appSettings: appSettings
     applicationInsightsName: applicationInsightsName
     appServicePlanId: appServicePlanId
-    appSettings: appSettings
     keyVaultName: keyVaultName
     runtimeName: 'node'
-    runtimeVersion: '20-lts'
-    scmDoBuildDuringDeployment: true
+    runtimeVersion: '20'
+    storageAccountName: storageAccountName
   }
 }
 
