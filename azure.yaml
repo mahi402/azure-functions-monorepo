@@ -39,9 +39,12 @@ services:
     language: js
     host: function
     build:
-      # Custom build step to use npm workspaces
-      command: | 
-          npm install --workspaces
+      command: |
+        # Custom build step for Docker image
+        docker build -t mahi40.azurecr.io/mono-app:v1 .
+        docker push mahi402.azurecr.io/mono-app:v1
     azure:
       resource-group: dev-rg
-      location: eastasia
+      location: eastus
+      container:
+        image: mahi402.azurecr.io/mono-app:v1
