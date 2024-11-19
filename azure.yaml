@@ -38,3 +38,6 @@ services:
     project: ./src/api
     language: js
     host: appservice
+    build:
+      # Custom build step to use npm workspaces
+      command: npm install --workspaces
