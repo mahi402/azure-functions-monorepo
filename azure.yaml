@@ -44,6 +44,3 @@ services:
           cp ../../package*.json ./ &&
           npm install --workspaces &&
           npm run build
-    azure:
-      resource-group: dev-rg
-      location: eastasia
