@@ -34,7 +34,6 @@ jobs:
       # Login to Azure using the Service Principal
       - name: Azure Login
         uses: azure/login@v1
-        shell: pwsh
         env:
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
 
