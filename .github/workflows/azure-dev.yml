@@ -62,7 +62,7 @@ jobs:
       - name: login to acr
         uses: azure/docker-login@v2
         with:
-          login-server: mahi42.azurecr.io
+          login-server: mahi402.azurecr.io
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
       
