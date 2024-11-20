@@ -8,8 +8,13 @@ workflows:
       - azd: deploy --all
 services:
   api:
-    image: mono:latest
+    project: ./src/api
+    langauge: js
     host: function
+    docker:
+        path: ./Dockerfile
+        context: ../
+   
   web:
     project: ./src/web
     dist: dist
