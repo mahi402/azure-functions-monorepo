@@ -13,6 +13,10 @@ services:
     settings:
         CONTAINER_REGISTRY_USERNAME: mahi402
         CONTAINER_REGISTRY_PASSWORD: ${{vars.REGISTRY_PASSWORD}}
+    bindings: 
+        - type: httpTrigger 
+        authLevel: function
+    linuxFxVersion: "DOCKER|mahi402.azurecr.io/mono:latest"
   web:
     project: ./src/web
     dist: dist
