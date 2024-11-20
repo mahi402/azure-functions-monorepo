@@ -9,10 +9,10 @@ workflows:
 services:
   api:
     image: mahi402.azurecr.io/mono:latest
-    host: azure-function
+    host: function
   web:
     project: ./src/web
     dist: dist
     language: js
-    host: appservice
+    host: staticwebapp
  
