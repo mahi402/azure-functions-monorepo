@@ -8,10 +8,11 @@ workflows:
       - azd: deploy --all
 services:
   api:
-    project: ./src/api
-    language: js
     image: mahi402.azurecr.io/mono:latest
-    host: function
+    host: containerapp
+    settings:
+        CONTAINER_REGISTRY_USERNAME: mahi402
+        
   web:
     project: ./src/web
     dist: dist
