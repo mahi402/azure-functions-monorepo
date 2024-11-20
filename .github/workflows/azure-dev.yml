@@ -59,11 +59,9 @@ jobs:
         env:
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Azure CLI script
-        uses: azure/CLI@v1
-        with:
-            azcliversion: 2.56.0
-            inlineScript: az acr login --name mahi402
+      - name: Login to ACR
+        run: |
+          az acr login --name mahi402
       
       - name: Provision Infrastructure
         run: azd provision --no-prompt
