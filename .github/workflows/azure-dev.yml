@@ -55,12 +55,12 @@ jobs:
             --client-id "$($info.clientId)" `
             --client-secret "$($info.clientSecret)" `
             --tenant-id "$($info.tenantId)"
-          # Log in to Azure Container Registry
-          az acr login --name mahi402
-      
         shell: pwsh
         env:
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+          
+      - name: acr login
+        run:  az acr login --name mahi402
 
       - name: Provision Infrastructure
         run: azd provision --no-prompt
