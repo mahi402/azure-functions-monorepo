@@ -28,9 +28,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up Azure CLI
+        uses: azure/setup-azure-cli@v1
+
+      # Login to Azure using the Service Principal
+      - name: Azure Login
+        uses: azure/login@v1
+        shell: pwsh
+        env:
+          AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+
       - name: Install azd
         uses: Azure/setup-azd@v1.0.0
-      
+        
       - name: Install Nodejs
         uses: actions/setup-node@v4
         with:
