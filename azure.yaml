@@ -15,7 +15,7 @@ services:
         CONTAINER_REGISTRY_PASSWORD: ${{vars.REGISTRY_PASSWORD}}
     bindings: 
         - type: httpTrigger 
-        authLevel: function
+          authLevel: function
     linuxFxVersion: "DOCKER|mahi402.azurecr.io/mono:latest"
   web:
     project: ./src/web
