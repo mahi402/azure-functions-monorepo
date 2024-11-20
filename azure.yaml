@@ -9,10 +9,10 @@ workflows:
 services:
   api:
     image: mahi402.azurecr.io/mono:latest
-    host: containerapp
+    host: function
     settings:
         CONTAINER_REGISTRY_USERNAME: mahi402
-        
+        CONTAINER_REGISTRY_PASSWORD: ${{vars.REGISTRY_PASSWORD}}
   web:
     project: ./src/web
     dist: dist
