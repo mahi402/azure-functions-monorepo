@@ -8,13 +8,10 @@ workflows:
       - azd: deploy --all
 services:
   api:
-    project: ./src/api
-    langauge: js
+   project: ./src/api
+   language: js
+    image: mahi402.azurecr.io/mono:latest
     host: function
-    docker:
-        path: ./Dockerfile
-        context: ../
-   
   web:
     project: ./src/web
     dist: dist
