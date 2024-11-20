@@ -65,7 +65,7 @@ jobs:
         with:
           login-server: mahi402.azurecr.io
           username: mahi402
-          password: ${{ var.REGISTRY_PASSWORD }}
+          password: ${{ vars.REGISTRY_PASSWORD }}
        
       - name: Provision Infrastructure
         run: azd provision --no-prompt
