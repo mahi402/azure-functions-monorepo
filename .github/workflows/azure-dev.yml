@@ -28,12 +28,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-       # Login to Azure using the Service Principal
-      - name: Azure Login
-        uses: azure/login@v1
-        env:
-          AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
-
       - name: Install azd
         uses: Azure/setup-azd@v1.0.0
         
