@@ -2,10 +2,18 @@
 
 # Build Node.js app
 # ------------------------------------
-  FROM node:20-alpine as build
+  FROM node:20-alpine AS build
   WORKDIR /app
+  COPY package.json .
   COPY . .
-  COPY ../../package.json ./package.json
-  RUN npm install
-  RUN npm run build
-  CMD [ "npm","start","--workspace=src/api" ]
+  RUN npm ci --cache /tmp/empty-cache
+  RUN npm run build --workspace=src/api
+  
+  # Run Node.js app
+  # ------------------------------------
+  FROM node:20-alpine
+  ENV NODE_ENV=production
+  WORKDIR /app
+  COPY --from=build /app/ .
+  EXPOSE 3000
+  CMD [ "npm", "start", "--workspace=src/api" ]
