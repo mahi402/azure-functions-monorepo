@@ -8,7 +8,7 @@ workflows:
       - azd: deploy --all
 services:
   api:
-    image: mono:latest
+    image: mahi402.azurecr.io/mono:latest
     host: function
     settings:
         CONTAINER_REGISTRY_USERNAME: mahi402
